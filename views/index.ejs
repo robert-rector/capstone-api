@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css" />
-    <title>Public API Capstone</title>
+    <title>Asteroids Near Earth</title>
 </head>
 <body>
-    <h1>Public API Capstone</h1>
+    <h1>How Many Asteroids are Near Earth?</h1>
+    <h2>Public API Capstone</h2>
+    <p>To see how many asteroids are near Earth, please enter a date below and click Submit.</p>
+    <form formaction="/" method="post">
+        <label for="startDate">Date</label><br>
+        <input type="date" name="startDate" /> <br><br>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+   
+    <% if (locals.result) { %>
+        <p>There <%= verb %> <%= result.element_count %> asteroids near Earth on <%= date %>. </p>
+   <% } %>
     
+
 </body>
 </html>
